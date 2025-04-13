@@ -1,6 +1,6 @@
 <!-- renderer.html -->
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HTML Renderer</title>
@@ -11,15 +11,15 @@
     </style>
 </head>
 <body>
-<h2 class="marginBot5"><span>修改推送至对话的表格样式</span></h2>
+<h2 class="marginBot5"><span>Modify Table Style for Chat Display</span></h2>
 <div id="tablePreview"></div>
 <small>
-    自定义表格的显示样式，当样式内容为空时默认显示原始表格。
-    <br>支持HTML标签，支持CSS样式，支持<code>\$\w\s+</code>的方式定位单元格。
-    <br>例如<code>$A0</code>代表第1列第1行(表头)，<code>$A1</code>代表第1列第2行(表内容第一行)。
+    Customize the display style of the table. When the style content is empty, the original table will be displayed by default.
+    <br>Supports HTML tags, CSS styles, and <code>\$\w\s+</code> format for cell positioning.
+    <br>For example, <code>$A0</code> represents the first column first row (header), <code>$A1</code> represents the first column second row (first row of content).
 </small>
 <textarea id="htmlEditor" rows="5"></textarea>
-<h3 class="marginBot5"><span>结果预览:</span></h3>
+<h3 class="marginBot5"><span>Preview Result:</span></h3>
 <div id="tableRendererDisplay"></div>
 
 <script>
@@ -27,7 +27,7 @@
     const tableRendererDisplay = document.getElementById('tableRendererDisplay');
     const renderHTML = () => {
         const htmlCode = htmlEditor.value;
-        tableRendererDisplay.innerHTML = htmlCode; // 使用 innerHTML 来渲染 HTML
+        tableRendererDisplay.innerHTML = htmlCode; // Use innerHTML to render HTML
     };
     htmlEditor.addEventListener('input', renderHTML);
 </script>
